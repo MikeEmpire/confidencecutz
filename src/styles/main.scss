@@ -1,5 +1,22 @@
 $video-height: 90vh;
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
+@import "./animations";
+@import "./cta";
+
+$main-font: "Manrope", sans-serif;
+
+@keyframes fade-in {
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes scale {
+	100% {
+		transform: scale(1);
+	}
+}
 
 body {
 	margin: 0;
@@ -13,8 +30,9 @@ body {
 }
 
 .video__container {
-	height: auto;
+	height: 90vh;
 	overflow: hidden;
+	position: relative;
 }
 
 #background-video__mesh {
@@ -35,4 +53,23 @@ body {
 		background-color: black;
 		height: 100%;
 	}
+}
+
+h4 {
+	font-family: $main-font;
+	color: aliceblue;
+	font-size: 4em;
+	z-index: 150;
+	max-width: 40ch;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0.94);
+	position: absolute;
+	top: 11%;
+	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+	right: 0;
+	left: 0;
 }

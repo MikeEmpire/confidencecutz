@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 // markup
 const IndexPage = () => {
   const x = useSpring({
-    delay: 1500,
+    delay: 900,
     transform: "translateX(-600px)",
     opacity: 0,
     config: { frequency: 1, mass: 1, friction: 2 },
@@ -20,7 +20,7 @@ const IndexPage = () => {
   });
   const x2 = useSpring({
     opacity: 0,
-    delay: 1500,
+    delay: 900,
     transform: "translateX(600px)",
     config: { frequency: 1, mass: 1, friction: 2 },
     from: {
@@ -28,14 +28,25 @@ const IndexPage = () => {
       transform: "translateX(0px)",
     },
   });
+  const textAppear = useSpring({
+    opacity: 1,
+    config: { frequency: 1, mass: 1, friction: 2 },
+    deplay: 7500,
+    from: { opacity: 0 },
+  });
   return (
     <main>
       <title>Confidence Cutz</title>
       <div className="video__container">
+        <button className="glow-on-hover" id="cta">Schedule A Cut</button>
         <section className="curtain__container">
           <animated.article style={{ ...x }}></animated.article>
           <animated.article style={{ ...x2 }}></animated.article>
         </section>
+        <animated.h4 style={{ ...textAppear }}>
+          <span>Confidence </span>
+          <span>Cutz</span>
+        </animated.h4>
         <div id="background-video__mesh" />
         <video id="background-video" autoPlay loop muted>
           <source src={mainVideo} type="video/mp4" />

@@ -12,7 +12,7 @@ const IndexPage = () => {
     delay: 900,
     transform: "translateX(-600px)",
     opacity: 0,
-    config: { frequency: 1, mass: 1, friction: 2 },
+    config: { frequency: 5, mass: 5, friction: 20 },
     from: {
       opacity: 1,
       transform: "translateX(0px)",
@@ -22,7 +22,7 @@ const IndexPage = () => {
     opacity: 0,
     delay: 900,
     transform: "translateX(600px)",
-    config: { frequency: 1, mass: 1, friction: 2 },
+    config: { frequency: 5, mass: 5, friction: 20 },
     from: {
       opacity: 1,
       transform: "translateX(0px)",

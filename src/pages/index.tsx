@@ -30,7 +30,7 @@ const IndexPage = () => {
   });
   const textAppear = useSpring({
     opacity: 1,
-    config: { frequency: 1, mass: 1, friction: 2 },
+    config: { frequency: 1, mass: 1, friction: 1 },
     deplay: 7500,
     from: { opacity: 0 },
   });

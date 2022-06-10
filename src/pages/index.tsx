@@ -1,52 +1,58 @@
 import * as React from "react";
-import { useSpring, animated } from "react-spring";
+import { motion } from "framer-motion";
 
 import mainVideo from "../videos/confidencecutz.mp4";
 
 import "../styles/main.scss";
 import Footer from "../components/Footer";
-// styles
-// markup
+
+const containerVariants = {
+  appear: {
+    height: "100%",
+    transition: {
+      duration: 2,
+    },
+  },
+  hidden: {
+    height: 0,
+    transition: {
+      duration: 2,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const textVariant = {
+  hidden: { y: 0, opacity: 1 },
+  appear: { y: 100, opacity: [0, 0.5, 0.7] },
+};
+
 const IndexPage = () => {
-  const x = useSpring({
-    delay: 900,
-    transform: "translateX(-600px)",
-    opacity: 0,
-    config: { frequency: 5, mass: 5, friction: 20 },
-    from: {
-      opacity: 1,
-      transform: "translateX(0px)",
-    },
-  });
-  const x2 = useSpring({
-    opacity: 0,
-    delay: 900,
-    transform: "translateX(600px)",
-    config: { frequency: 5, mass: 5, friction: 20 },
-    from: {
-      opacity: 1,
-      transform: "translateX(0px)",
-    },
-  });
-  const textAppear = useSpring({
-    opacity: 1,
-    config: { frequency: 1, mass: 1, friction: 1 },
-    deplay: 7500,
-    from: { opacity: 0 },
-  });
   return (
     <main>
       <title>Confidence Cutz</title>
+      <motion.div
+        style={{
+          background: "black",
+          position: "absolute",
+          width: "100%",
+          zIndex: 100,
+        }}
+        variants={containerVariants}
+        animate="hidden"
+        initial="appear"
+      >
+        <motion.h4
+          variants={textVariant}
+          transition={{ type: "spring", bounce: 0.5 }}
+        >
+          Confidence Cutz
+        </motion.h4>
+      </motion.div>
       <div className="video__container">
-        <button className="glow-on-hover" id="cta">Schedule A Cut</button>
-        <section className="curtain__container">
-          <animated.article style={{ ...x }}></animated.article>
-          <animated.article style={{ ...x2 }}></animated.article>
-        </section>
-        <animated.h4 style={{ ...textAppear }}>
-          <span>Confidence </span>
-          <span>Cutz</span>
-        </animated.h4>
+        <button className="glow-on-hover" id="cta">
+          Schedule A Cut
+        </button>
         <div id="background-video__mesh" />
         <video id="background-video" autoPlay loop muted>
           <source src={mainVideo} type="video/mp4" />

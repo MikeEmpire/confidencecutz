@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { SiInstagram } from "@react-icons/all-files/si/SiInstagram";
 
@@ -6,7 +7,7 @@ import "./styles.scss";
 
 const Footer = () => {
   return (
-    <footer>
+    <motion.footer>
       <section>
         <article>
           <header>Confidence Cutz</header>
@@ -31,7 +32,7 @@ const Footer = () => {
       <section>
         <article>Contact Us</article>
       </section>
-    </footer>
+    </motion.footer>
   );
 };
 

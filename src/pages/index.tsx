@@ -57,6 +57,7 @@ const IndexPage = () => {
         <video id="background-video" autoPlay loop muted>
           <source src={mainVideo} type="video/mp4" />
         </video>
+        <div className="vignette" />
       </div>
       <Footer />
     </main>

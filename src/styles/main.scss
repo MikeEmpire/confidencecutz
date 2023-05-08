@@ -6,70 +6,78 @@ $video-height: 90vh;
 $main-font: "Manrope", sans-serif;
 
 @keyframes fade-in {
-	100% {
-		opacity: 1;
-		filter: blur(0);
-	}
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 @keyframes scale {
-	100% {
-		transform: scale(1);
-	}
+  100% {
+    transform: scale(1);
+  }
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 #background-video {
-	width: 100vw;
-	height: 90vh;
-	object-fit: cover;
-	z-index: -1;
+  width: 100vw;
+  height: 90vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .video__container {
-	height: 90vh;
-	overflow: hidden;
-	position: relative;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
 }
 
 #background-video__mesh {
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.3);
-	width: 100%;
-	height: 90vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 90vh;
 }
 
 .curtain__container {
-	position: absolute;
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	height: 90vh;
-	article {
-		width: 50%;
-		background-color: black;
-		height: 100%;
-	}
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  height: 90vh;
+  article {
+    width: 50%;
+    background-color: black;
+    height: 100%;
+  }
 }
 
 h4 {
-	font-family: $main-font;
-	color: aliceblue;
-	font-size: 4em;
-	z-index: 150;
-	max-width: 40ch;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transform: scale(0.94);
-	position: absolute;
-	top: 11%;
-	animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-	right: 0;
-	left: 0;
+  font-family: $main-font;
+  color: aliceblue;
+  font-size: 4em;
+  z-index: 150;
+  max-width: 40ch;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.94);
+  position: absolute;
+  top: 11%;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  right: 0;
+  left: 0;
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  width: 100%;
 }

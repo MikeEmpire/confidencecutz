@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 import mainVideo from "../videos/confidencecutz.mp4";
 
-import "../styles/main.scss";
 import Footer from "../components/Footer";
+
+import "../styles/main.scss";
 
 const containerVariants = {
   appear: {
@@ -41,6 +42,7 @@ const IndexPage = () => {
         variants={containerVariants}
         animate="hidden"
         initial="appear"
+        className="content__container"
       >
         <motion.h4
           variants={textVariant}
@@ -48,11 +50,19 @@ const IndexPage = () => {
         >
           Confidence Cutz
         </motion.h4>
+        <h6 className="subtitle">
+          where looking and feeling your best is our top priority
+        </h6>
+        <h6 className="title-caption">
+          Our services don't stop at haircuts, either. We offer a range of
+          grooming services to keep you looking and feeling your best, including
+          beard trims, hot shaves, etc!
+        </h6>
+        <button className="glow-on-hover" id="cta">
+          Book A Cut
+        </button>
       </motion.div>
       <div className="video__container">
-        <button className="glow-on-hover" id="cta">
-          Schedule A Cut
-        </button>
         <div id="background-video__mesh" />
         <video id="background-video" autoPlay loop muted>
           <source src={mainVideo} type="video/mp4" />

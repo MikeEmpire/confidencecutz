@@ -2,8 +2,9 @@ $video-height: 90vh;
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
 @import "./animations";
 @import "./cta";
+@import "./typography";
 
-$main-font: "Manrope", sans-serif;
+$main-font: "Neue Haas", sans-serif;
 
 @keyframes fade-in {
   100% {
@@ -56,22 +57,48 @@ body {
 }
 
 h4 {
-  font-family: $main-font;
+  font-family: $main-font, sans-serif;
   color: aliceblue;
   font-size: 4em;
   z-index: 150;
   max-width: 40ch;
-  text-align: center;
   display: flex;
+  padding-left: 5%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  -webkit-transform: scale(0.94);
   transform: scale(0.94);
-  position: absolute;
   top: 11%;
+  -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  right: 0;
-  left: 0;
+}
+
+.subtitle {
+  font-family: $main-font, sans-serif;
+  color: aliceblue;
+  z-index: 150;
+  transform: scale(0.94);
+  -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.1em;
+  line-height: 40px;
+  text-align: right;
+  letter-spacing: -0.045em;
+  padding-right: 4%;
+}
+
+.title-caption {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  font-family: $main-font, sans-serif;
+  color: #ffffff;
+  max-width: 80%;
+  padding-left: 3%;
 }
 
 .vignette {
@@ -80,4 +107,45 @@ h4 {
   height: 100%;
   background: linear-gradient(to bottom, transparent 0%, black 100%);
   width: 100%;
+}
+
+.content__container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  background-color: black;
+  color: white;
+  width: 100%;
+  justify-content: space-around;
+  font-family: $main-font;
+  align-items: center;
+  align-content: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  header {
+    display: flex;
+    text-align: center;
+  }
+  ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: small;
+  }
+  article {
+    @extend section;
+  }
 }

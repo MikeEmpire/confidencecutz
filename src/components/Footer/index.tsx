@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 import { SiInstagram } from "@react-icons/all-files/si/SiInstagram";
 
-import "./styles.scss";
-
 const Footer = () => {
   return (
     <motion.footer>

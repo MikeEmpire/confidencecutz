@@ -1,4 +1,4 @@
-$video-height: 90vh;
+$video-height: 85vh;
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap");
 @import "./animations";
 @import "./cta";
@@ -31,14 +31,14 @@ body {
 }
 
 .video__container {
-  height: 90vh;
+  height: 85vh;
   overflow: hidden;
   position: relative;
 }
 
 #background-video__mesh {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 90vh;
 }
@@ -59,8 +59,10 @@ body {
 h4 {
   font-family: $main-font, sans-serif;
   color: aliceblue;
-  font-size: 4em;
+  font-size: 2.4em;
   z-index: 150;
+  margin: 0;
+  margin-top: 2em;
   max-width: 40ch;
   display: flex;
   padding-left: 5%;
@@ -81,7 +83,7 @@ h4 {
   -webkit-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2.1em;
   line-height: 40px;
   text-align: right;
@@ -91,8 +93,8 @@ h4 {
 
 .title-caption {
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 400;
+  font-size: 1.5em;
   line-height: 30px;
   letter-spacing: -0.015em;
   font-family: $main-font, sans-serif;
@@ -117,7 +119,7 @@ h4 {
 footer {
   display: flex;
   flex-direction: row;
-  height: 10vh;
+  height: 15vh;
   background-color: black;
   color: white;
   width: 100%;
@@ -128,10 +130,20 @@ footer {
   a {
     color: white;
     text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    text-align: right;
   }
   header {
     display: flex;
     text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: lowercase;
   }
   ul {
     padding: 0;

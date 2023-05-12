@@ -71,7 +71,7 @@ const IndexPage = () => {
           </motion.div>
           <div className="video__container">
             <div id="background-video__mesh" />
-            <video id="background-video" autoPlay loop muted>
+            <video id="background-video" playsInline autoPlay loop muted>
               <source src="/videos/confidencecutz.mp4" type="video/mp4" />
             </video>
             <div className="vignette" />

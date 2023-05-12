@@ -1,8 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
-import mainVideo from "../videos/confidencecutz.mp4";
-
 import Footer from "../components/Footer";
 
 import "../styles/main.scss";
@@ -74,7 +72,7 @@ const IndexPage = () => {
           <div className="video__container">
             <div id="background-video__mesh" />
             <video id="background-video" autoPlay loop muted>
-              <source src={mainVideo} type="video/mp4" />
+              <source src="/videos/confidencecutz.mp4" type="video/mp4" />
             </video>
             <div className="vignette" />
           </div>

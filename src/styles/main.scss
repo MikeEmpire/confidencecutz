@@ -165,13 +165,13 @@ footer {
 menu {
   section {
     color: whitesmoke;
-    font-family: "Neue Haas Grotesk Text Pro";
+    font-family: $main-font;
   }
 }
 
 .contact-link {
   margin: 14px;
-  font-family: "Neue Haas Grotesk Text Pro";
+  font-family: $main-font;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;

@@ -69,14 +69,6 @@ const IndexPage = () => {
               Book A Cut
             </button>
           </motion.div>
-          <div className="video__container">
-            <div id="background-video__mesh" />
-            <video id="background-video" playsInline autoPlay loop muted>
-              <source src="/videos/confidencecutz.mp4" type="video/mp4" />
-              <div className="vignette" />
-            </video>
-            <div className="vignette" />
-          </div>
           <Footer />
         </div>
         <menu>

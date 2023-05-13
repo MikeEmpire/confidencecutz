@@ -249,9 +249,15 @@ menu {
   }
 }
 @media (max-width: 768px) {
+  video {
+    display: none;
+  }
   .main-content__container {
     display: flex;
     flex-direction: column;
+  }
+  .video__container {
+    background-image: url("../images/homebg.jpeg");
   }
   menu {
     display: flex;

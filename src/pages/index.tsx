@@ -1,10 +1,10 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
+import BGVideo from "../components/BGVideo";
 import Footer from "../components/Footer";
 
 import "../styles/main.scss";
-import BGVideo from "components/BGVideo";
 
 const containerVariants = {
   appear: {

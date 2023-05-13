@@ -9,13 +9,11 @@ function BGVideo({ className }: VideoProps): JSX.Element {
   useEffect(() => {
     const playPromise = videoRef.current?.play();
     if (playPromise !== undefined) {
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {})
-          .catch((error) => {
-            console.log(error);
-          });
-      }
+      playPromise
+        .then(() => {})
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }, []);
   return (
@@ -29,11 +27,10 @@ function BGVideo({ className }: VideoProps): JSX.Element {
         loop
         muted
         preload="auto"
-				controls={false}
+        controls={false}
         onPointerDown={() => {}}
-      >
-        <source src="/videos/confidencecutz.mp4" type="video/mp4" />
-      </video>
+        src="/videos/confidencecutz.mp4"
+      />
       <div className="vignette" />
     </div>
   );

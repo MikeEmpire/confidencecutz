@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "../components/Footer";
 
 import "../styles/main.scss";
+import BGVideo from "components/BGVideo";
 
 const containerVariants = {
   appear: {
@@ -69,10 +70,7 @@ const IndexPage = () => {
               Book A Cut
             </button>
           </motion.div>
-          <div className="video__container">
-            <div id="background-video__mesh" />
-            <div className="vignette" />
-          </div>
+          <BGVideo />
           <Footer />
         </div>
         <menu>

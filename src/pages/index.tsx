@@ -69,6 +69,10 @@ const IndexPage = () => {
               Book A Cut
             </button>
           </motion.div>
+          <div className="video__container">
+            <div id="background-video__mesh" />
+            <div className="vignette" />
+          </div>
           <Footer />
         </div>
         <menu>

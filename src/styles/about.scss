@@ -1,0 +1,67 @@
+#about-section {
+  background-color: black;
+  padding: 0 7%;
+  h3 {
+    margin: 0;
+    font-family: "Neue Haas Grotesk Text Pro";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+    color: #fcf0e3;
+    padding-right: 10%;
+    margin-bottom: 5%;
+  }
+  figure {
+    display: flex;
+    margin: 0;
+    padding-bottom: 30px;
+    img {
+      margin-left: 60px;
+      margin-right: 36px;
+    }
+    figcaption {
+      font-family: "Neue Haas Grotesk Text Pro";
+      font-style: normal;
+      font-weight: 500;
+      line-height: 25px;
+      color: whitesmoke;
+      padding-right: 10%;
+    }
+    h5 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50px;
+      color: #d9d9d9;
+      margin: 0;
+      margin-top: 8%;
+    }
+    h6 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 39px;
+      color: #ffffff;
+      margin: 0;
+      margin-top: 4%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #about-section {
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 100%;
+        margin: 0;
+      }
+      figcaption {
+        text-align: center;
+      }
+    }
+  }
+}

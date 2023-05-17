@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
+import About from "../components/About";
 import BGVideo from "../components/BGVideo";
 import Footer from "../components/Footer";
 
@@ -43,6 +44,7 @@ const IndexPage = () => {
               background: "black",
               position: "absolute",
               zIndex: 100,
+              width: "100%"
             }}
             onAnimationComplete={handleAnimationComplete}
             variants={containerVariants}
@@ -71,6 +73,7 @@ const IndexPage = () => {
             </button>
           </motion.div>
           <BGVideo />
+          <About />
           <Footer />
         </div>
         <menu>

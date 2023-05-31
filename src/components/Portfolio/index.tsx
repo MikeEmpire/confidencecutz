@@ -1,6 +1,8 @@
 import React from "react";
 import Masonry from "react-masonry-css";
 
+import MasonryImage from "./MasonryImage";
+
 import "../../styles/masonry.scss";
 
 const photos: string[] = [
@@ -28,20 +30,9 @@ function Portfolio(): JSX.Element {
         className="portfolio__container"
         columnClassName="portfolio__column"
       >
-        {photos.map((p, i) => {
-          let width = "100%";
-          if (i % 2 === 0) {
-            width = "70%";
-          }
-          return (
-            <img
-              style={{ width }}
-              key={p}
-              src={p}
-              alt={`slide image ${i + 1}`}
-            />
-          );
-        })}
+        {photos.map((p, i) => (
+          <MasonryImage image={p} index={i} key={p} />
+        ))}
       </Masonry>
     </div>
   );

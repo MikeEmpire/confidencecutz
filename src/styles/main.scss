@@ -4,8 +4,6 @@ $video-height: 85vh;
 @import "./cta";
 @import "./typography";
 
-$main-font: "Neue Haas", sans-serif;
-
 @keyframes fade-in {
   100% {
     opacity: 1;
@@ -20,6 +18,7 @@ $main-font: "Neue Haas", sans-serif;
 }
 
 body {
+  background-color: black;
   margin: 0;
 }
 

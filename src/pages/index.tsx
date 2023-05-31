@@ -6,6 +6,7 @@ import BGVideo from "../components/BGVideo";
 import Footer from "../components/Footer";
 
 import "../styles/main.scss";
+import Portfolio from "../components/Portfolio";
 
 const containerVariants = {
   appear: {
@@ -44,7 +45,7 @@ const IndexPage = () => {
               background: "black",
               position: "absolute",
               zIndex: 100,
-              width: "100%"
+              width: "100%",
             }}
             onAnimationComplete={handleAnimationComplete}
             variants={containerVariants}
@@ -74,6 +75,7 @@ const IndexPage = () => {
           </motion.div>
           <BGVideo />
           <About />
+          <Portfolio />
           <Footer />
         </div>
         <menu>

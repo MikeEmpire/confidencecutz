@@ -1,0 +1,40 @@
+.portfolio__container {
+  background-color: black;
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.portfolio__column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+/* Style your items */
+.portfolio__column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 30px;
+}
+
+.portfolio-section__container {
+  background-color: black;
+  color: white;
+  font-family: "Neue Haas Grotesk Text Pro";
+	padding: 0 7%;
+  h5 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-right: 10%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: whitesmoke;
+  }
+}
